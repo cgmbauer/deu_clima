@@ -1,5 +1,9 @@
 import {combineReducers} from 'redux';
 
-export const rootReducer = combineReducers({});
+import getWeather from './getWeather';
+
+export const rootReducer = combineReducers({
+  getWeather,
+});
 
 export type RootState = ReturnType<typeof rootReducer>;
