@@ -11,6 +11,12 @@ const currentWeatherStyle = StyleSheet.create({
   currentDescriptionText: {
     fontSize: 18,
   },
+
+  imageAndTemperatureContainer: {
+    marginTop: 70,
+    alignItems: 'center',
+    position: 'relative',
+  },
 });
 
 export default currentWeatherStyle;

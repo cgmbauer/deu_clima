@@ -4,6 +4,11 @@ export type Actions = {
     clear: 'weather/clear';
     error: 'weather/error';
   };
+  geoLocation: {
+    get: 'geoLocation/get';
+    clear: 'geoLocation/clear';
+    error: 'geoLocation/error';
+  };
 };
 
 const ACTIONS: Actions = {
@@ -11,6 +16,11 @@ const ACTIONS: Actions = {
     get: 'weather/get',
     clear: 'weather/clear',
     error: 'weather/error',
+  },
+  geoLocation: {
+    get: 'geoLocation/get',
+    clear: 'geoLocation/clear',
+    error: 'geoLocation/error',
   },
 };
 

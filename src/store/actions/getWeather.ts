@@ -10,7 +10,8 @@ export interface GetWeather {
     data: {
       timeZone: string;
       current: {
-        temp: string;
+        dt: number;
+        temp: number;
         weather: {
           id: number;
           main: string;
@@ -19,7 +20,8 @@ export interface GetWeather {
         }[];
       };
       hourly: {
-        temp: string;
+        dt: number;
+        temp: number;
         weather: {
           id: number;
           main: string;
@@ -28,7 +30,10 @@ export interface GetWeather {
         }[];
       }[];
       daily: {
-        temp: string;
+        dt: number;
+        temp: {
+          day: number;
+        };
         weather: {
           id: number;
           main: string;

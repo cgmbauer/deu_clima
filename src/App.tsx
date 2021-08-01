@@ -4,6 +4,7 @@ import {StatusBar, View, LogBox} from 'react-native';
 import {Provider} from 'react-redux';
 import {NavigationContainer} from '@react-navigation/native';
 import {createStackNavigator} from '@react-navigation/stack';
+import moment from 'moment';
 
 import {ROUTES} from './config/routes';
 import store from './store';
@@ -13,6 +14,8 @@ import HomePage from './pages/home';
 
 const Stack = createStackNavigator();
 LogBox.ignoreAllLogs();
+
+moment.locale('pt-br');
 
 const App = () => {
   return (

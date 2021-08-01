@@ -7,35 +7,43 @@ const INITIAL_STATE: GetWeather['data'] = {
   data: {
     timeZone: '',
     current: {
-      temp: '',
+      dt: 0,
+      temp: 0,
       weather: [
         {
           id: 0,
           main: '',
           description: '',
+          icon: '',
         },
       ],
     },
     daily: [
       {
-        temp: '',
+        dt: 0,
+        temp: {
+          day: 0,
+        },
         weather: [
           {
             id: 0,
             main: '',
             description: '',
+            icon: '',
           },
         ],
       },
     ],
     hourly: [
       {
-        temp: '',
+        dt: 0,
+        temp: 0,
         weather: [
           {
             id: 0,
             main: '',
             description: '',
+            icon: '',
           },
         ],
       },
