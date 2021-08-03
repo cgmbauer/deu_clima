@@ -5,8 +5,6 @@ Com este aplicativo, é possível obter a temperatura atual do local e informaç
 Assim fica mais fácil de se preparar para as situações do dia-a-dia!
 <br></br>
 
-![Deu Clima gif]()
-
 ## :bookmark_tabs: Índice
 1. [Ferramentas](#Ferramentas)
 2. [Como Utilizar?](#Como_Utilizar)
@@ -23,7 +21,7 @@ Assim fica mais fácil de se preparar para as situações do dia-a-dia!
 
 - [OpenWeather API](https://openweathermap.org/)
 
-## Como utilizar? <a name="Como_Utilizar"></a>
+## :rocket: Como utilizar? <a name="Como_Utilizar"></a>
 
 Se você está interessad@ em utilizar este aplicativo, siga os passos abaixo. :sun_with_face:
 
