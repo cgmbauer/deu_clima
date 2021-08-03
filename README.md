@@ -49,13 +49,13 @@ Se você está interessad@ em utilizar este aplicativo, siga os passos abaixo. :
 
 - É necessário ter um emulador Android com uma versão de API mínima igual a 21
 
-### Instalando:
+#### Instalando:
 
 1. Clone este repositório ```git clone https://github.com/cgmbauer/deu_clima.git```.
 2. Entre na pasta recém criada utilizando o terminal ```cd deu_clima```.
 3. Execute o comando ```yarn``` para instalar as dependências.
 
-### Utilizando: <a name="Utilizando"></a>
+#### Utilizando: <a name="Utilizando"></a>
 
 Após o processo de instalação finalizar, você deve se cadastrar no [OpenWeather API](https://openweathermap.org/) para receber uma API Key, que será utilizada para buscar os dados sobre o clima.
 
