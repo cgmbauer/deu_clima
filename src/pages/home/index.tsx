@@ -1,5 +1,6 @@
 import React, {useEffect, useState, useCallback} from 'react';
 import {
+  PermissionsAndroid,
   View,
   ScrollView,
   Text,
@@ -35,6 +36,8 @@ const HomePage: React.FC<PropsFromRedux> = ({
   getGeoLocationActions,
   getGeoLocationState,
 }) => {
+  const [hasPermission, setHasPermission] = useState(false);
+
   const [isLoading, setIsLoading] = useState(true);
 
   const [weatherData, setWeatherData] = useState(
@@ -50,34 +53,63 @@ const HomePage: React.FC<PropsFromRedux> = ({
   const [openMenu, setOpenMenu] = useState(false);
 
   useEffect(() => {
-    Geolocation.getCurrentPosition(
-      (position) => {
-        console.log(position);
+    const askPermission = async () => {
+      const checkLocationPermission = await PermissionsAndroid.check(
+        PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+      );
 
-        getGeoLocationActions.getGeoLocation(
-          position.coords.latitude,
-          position.coords.longitude,
+      setHasPermission(checkLocationPermission);
+
+      if (!checkLocationPermission) {
+        try {
+          await PermissionsAndroid.request(
+            PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
+          );
+        } catch (err) {
+          console.warn(err);
+        }
+        const checkLocationPermissionAgain = await PermissionsAndroid.check(
+          PermissionsAndroid.PERMISSIONS.ACCESS_FINE_LOCATION,
         );
 
-        getWeatherActions.getWeather(
-          position.coords.latitude,
-          position.coords.longitude,
-        );
-      },
-      (error) => {
-        console.log(error.code, error.message);
-      },
-      {
-        enableHighAccuracy: true,
-        timeout: 15000,
-        maximumAge: 10000,
-        accuracy: {
-          android: 'high',
-          ios: 'best',
-        },
-      },
-    );
+        setHasPermission(checkLocationPermissionAgain);
+      }
+    };
+
+    askPermission();
   }, []);
+
+  useEffect(() => {
+    if (hasPermission) {
+      Geolocation.getCurrentPosition(
+        (position) => {
+          console.log(position);
+
+          getGeoLocationActions.getGeoLocation(
+            position.coords.latitude,
+            position.coords.longitude,
+          );
+
+          getWeatherActions.getWeather(
+            position.coords.latitude,
+            position.coords.longitude,
+          );
+        },
+        (error) => {
+          console.log(error.code, error.message);
+        },
+        {
+          enableHighAccuracy: true,
+          timeout: 15000,
+          maximumAge: 10000,
+          accuracy: {
+            android: 'high',
+            ios: 'best',
+          },
+        },
+      );
+    }
+  }, [hasPermission]);
 
   useEffect(() => {
     if (getGeoLocationState.status === 200) {

@@ -6,7 +6,7 @@ const homePageStyle = StyleSheet.create({
     width: '100%',
     alignItems: 'center',
     backgroundColor: '#f1f1f1',
-    paddingHorizontal: 40,
+    paddingHorizontal: 10,
   },
   bodyBgDay: {
     backgroundColor: '#38B6FF',
@@ -65,6 +65,7 @@ const homePageStyle = StyleSheet.create({
     display: 'flex',
     flexDirection: 'row',
     justifyContent: 'space-around',
+    paddingTop: 40,
   },
   selectedButton: {
     paddingHorizontal: 10,
