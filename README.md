@@ -32,10 +32,11 @@ Se você está interessad@ em utilizar este aplicativo, siga os passos abaixo. :
 #### Pré-requesitos:
 
 - Celular com Android
+- Permitir acesso a localização
 
 #### Instalando:
 
-- Baixar o APK (aplicativo) no [link]()
+- Baixar o APK (aplicativo) neste [link](https://apk-deu-clima.s3.amazonaws.com/deu_clima.apk)
 - Instalar o aplicativo no celular
 - Pronto!
 
