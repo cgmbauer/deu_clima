@@ -5,6 +5,8 @@ Com este aplicativo, é possível obter a temperatura atual do local e informaç
 Assim fica mais fácil de se preparar para as situações do dia-a-dia!
 <br></br>
 
+![deu clima gif](https://github.com/cgmbauer/assets/blob/master/gifs/deu_clima.gif)
+
 ## :bookmark_tabs: Índice
 1. [Ferramentas](#Ferramentas)
 2. [Como Utilizar?](#Como_Utilizar)
@@ -75,4 +77,18 @@ Execute o comando ``` yarn android ``` e após o build do aplicativo, execute ``
 
 ## Fotos <a name="fotos"></a>
 
-- Em construção
+- Período: Dia | Tempo atual e previsão semanal
+
+![dia_clima-semanal](https://github.com/cgmbauer/assets/blob/master/deu_clima/dia_clima-semanal.png)
+
+- Período: Noite | Tempo atual e previsão semanal
+
+![noite_ceu-limpo](https://github.com/cgmbauer/assets/blob/master/deu_clima/noite_ceu-limpo.png)
+
+- Período: Noite | Botão atualizar informações
+
+![botão atualizar](https://github.com/cgmbauer/assets/blob/master/deu_clima/botao_atualizar.png)
+
+- Período: Noite | Tempo atual e previsão para próximas 24 horas
+
+![noite_clima-atual_diario](https://github.com/cgmbauer/assets/blob/master/deu_clima/noite_clima-atual_diario.png)
